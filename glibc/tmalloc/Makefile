@@ -122,7 +122,7 @@ tests-exclude-mcheck = tst-mallocstate \
 tests-mcheck = $(filter-out $(tests-exclude-mcheck) $(tests-static), $(tests))
 endif
 
-routines = malloc mcheck mtrace obstack reallocarray \
+routines = tmalloc mcheck mtrace obstack reallocarray \
   scratch_buffer_dupfree \
   scratch_buffer_grow scratch_buffer_grow_preserve \
   scratch_buffer_set_array_size \
@@ -286,7 +286,7 @@ tst-malloc-usable-tunables-ENV = GLIBC_TUNABLES=glibc.malloc.check=3 \
 
 tst-mxfast-ENV = GLIBC_TUNABLES=glibc.malloc.tcache_count=0:glibc.malloc.mxfast=0
 
-CPPFLAGS-malloc-debug.c += -DUSE_TCACHE=0
+CPPFLAGS-tmalloc-debug.c += -DUSE_TCACHE=0
 ifeq ($(experimental-malloc),yes)
 CPPFLAGS-tmalloc.c += -DUSE_TCACHE=1
 else
@@ -333,13 +333,13 @@ $(objpfx)tst-interpose-static-thread: \
 tst-dynarray-ENV = MALLOC_TRACE=$(objpfx)tst-dynarray.mtrace \
 		   LD_PRELOAD=$(objpfx)libc_malloc_debug.so
 $(objpfx)tst-dynarray-mem.out: $(objpfx)tst-dynarray.out
-	$(common-objpfx)malloc/mtrace $(objpfx)tst-dynarray.mtrace > $@; \
+	$(common-objpfx)tmalloc/mtrace $(objpfx)tst-dynarray.mtrace > $@; \
 	$(evaluate-test)
 
 tst-dynarray-fail-ENV = MALLOC_TRACE=$(objpfx)tst-dynarray-fail.mtrace \
 			LD_PRELOAD=$(objpfx)libc_malloc_debug.so
 $(objpfx)tst-dynarray-fail-mem.out: $(objpfx)tst-dynarray-fail.out
-	$(common-objpfx)malloc/mtrace $(objpfx)tst-dynarray-fail.mtrace > $@; \
+	$(common-objpfx)tmalloc/mtrace $(objpfx)tst-dynarray-fail.mtrace > $@; \
 	$(evaluate-test)
 
 $(objpfx)tst-malloc-tcache-leak: $(shared-thread-library)

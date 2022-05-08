@@ -1,6 +1,6 @@
 #ifndef _MALLOC_H
 
-#include <malloc/malloc.h>
+#include <tmalloc/tmalloc.h>
 
 # ifndef _ISOMAC
 #  include <rtld-malloc.h>

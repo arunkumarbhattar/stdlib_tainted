@@ -244,7 +244,7 @@
 /* For memory tagging.  */
 #include <libc-mtag.h>
 
-#include <tmalloc/tmalloc-internal.h>
+#include <tmalloc/malloc-internal.h>
 
 /* For SINGLE_THREAD_P.  */
 #include <sysdep-cancel.h>
