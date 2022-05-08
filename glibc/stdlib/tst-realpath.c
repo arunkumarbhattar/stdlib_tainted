@@ -26,7 +26,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <malloc.h>
+#include <tmalloc.h>
 
 #if defined __GNUC__ && __GNUC__ >= 11
 /* Turn GCC -Wmismatched-dealloc warnings into errors to expose false

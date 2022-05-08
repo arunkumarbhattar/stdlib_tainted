@@ -1,6 +1,6 @@
 #include <dlfcn.h>
 #include <stdio.h>
-#include <malloc.h>
+#include <tmalloc.h>
 
 int
 main (void)

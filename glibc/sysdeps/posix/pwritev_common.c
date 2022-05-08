@@ -21,7 +21,7 @@
 #include <sys/uio.h>
 #include <sys/param.h>
 #include <errno.h>
-#include <malloc.h>
+#include <tmalloc.h>
 
 #include <ldsodefs.h>
 #include <libc-pointer-arith.h>

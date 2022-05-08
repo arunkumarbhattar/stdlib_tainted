@@ -242,7 +242,7 @@ ifneq "$(strip $(binaries-mcheck-tests))" ""
 $(addprefix $(objpfx),$(binaries-mcheck-tests)): %-mcheck: %.o \
   $(link-extra-libs-tests) \
   $(sort $(filter $(common-objpfx)lib%,$(link-libc))) \
-  $(common-objpfx)malloc/libmcheck.a \
+  $(common-objpfx)tmalloc/libmcheck.a \
   $(addprefix $(csu-objpfx),start.o) $(+preinit) $(+postinit)
 	$(+link-tests)
 endif

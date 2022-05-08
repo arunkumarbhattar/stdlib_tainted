@@ -1,5 +1,5 @@
 #ifndef _OBSTACK_H
-#include <malloc/obstack.h>
+#include <tmalloc/obstack.h>
 
 # ifndef _ISOMAC
 

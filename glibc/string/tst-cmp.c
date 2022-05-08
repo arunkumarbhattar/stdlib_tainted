@@ -21,7 +21,7 @@
    20327.  */
 
 #include <limits.h>
-#include <malloc.h>
+#include <tmalloc.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdlib.h>

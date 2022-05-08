@@ -27,7 +27,7 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <getopt.h>
-#include <malloc.h>
+#include <tmalloc.h>
 #include <paths.h>
 #include <search.h>
 #include <signal.h>

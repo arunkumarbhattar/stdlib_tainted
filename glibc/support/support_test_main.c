@@ -24,7 +24,7 @@
 #include <assert.h>
 #include <errno.h>
 #include <getopt.h>
-#include <malloc.h>
+#include <tmalloc.h>
 #include <signal.h>
 #include <stdbool.h>
 #include <stdlib.h>
