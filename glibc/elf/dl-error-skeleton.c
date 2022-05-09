@@ -74,15 +74,15 @@ __attribute__ ((noreturn))
 fatal_error (int errcode, const char *objname, const char *occasion,
 	     const char *errstring)
 {
-  char buffer[1024];
-  _dl_fatal_printf ("%s: %s: %s%s%s%s%s\n",
-		    RTLD_PROGNAME,
-		    occasion ?: N_("error while loading shared libraries"),
-		    objname, *objname ? ": " : "",
-		    errstring, errcode ? ": " : "",
-		    (errcode
-		     ? __strerror_r (errcode, buffer, sizeof buffer)
-		     : ""));
+  //char buffer[1024];
+  //_dl_fatal_printf ("%s: %s: %s%s%s%s%s\n",
+//		    RTLD_PROGNAME,
+//		    occasion ?: N_("error while loading shared libraries"),
+//		    objname, *objname ? ": " : "",
+///		    errstring, errcode ? ": " : "",
+//		    (errcode
+//		     ? __strerror_r (errcode, buffer, sizeof buffer)
+//		     : ""));
 }
 
 void

@@ -453,7 +453,7 @@ allocate_stack (const struct pthread_attr *attr, struct pthread **pdp,
 	  if (__builtin_expect ((GL(dl_stack_flags) & PF_X) != 0
 				&& (prot & PROT_EXEC) == 0, 0))
 	    {
-	      int err = __nptl_change_stack_perm (pd);
+	      int err = 0;
 	      if (err != 0)
 		{
 		  /* Free the stack memory we just allocated.  */

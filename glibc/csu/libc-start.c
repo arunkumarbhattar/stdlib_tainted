@@ -376,7 +376,7 @@ LIBC_START_MAIN (int (*main) (int, char **, char ** MAIN_AUXVEC_DECL),
     call_init (argc, argv, __environ);
 
   /* Auditing checkpoint: we have a new object.  */
-  _dl_audit_preinit (GL(dl_ns)[LM_ID_BASE]._ns_loaded);
+  //_dl_audit_preinit (GL(dl_ns)[LM_ID_BASE]._ns_loaded);
 
   if (__glibc_unlikely (GLRO(dl_debug_mask) & DL_DEBUG_IMPCALLS))
     GLRO(dl_debug_printf) ("\ntransferring control: %s\n\n", argv[0]);

@@ -54,7 +54,7 @@ _dl_sym_post (lookup_t result, const ElfW(Sym) *ref, void *value,
     {
       if (match == NULL)
         match = _dl_sym_find_caller_link_map (caller);
-      _dl_audit_symbind_alt (match, ref, &value, result);
+      //_dl_audit_symbind_alt (match, ref, &value, result);
     }
 #endif
   return value;
