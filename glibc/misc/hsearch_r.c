@@ -16,7 +16,7 @@
    <https://www.gnu.org/licenses/>.  */
 
 #include <errno.h>
-#include <tmalloc.h>
+#include <malloc.h>
 #include <string.h>
 #include <stdint.h>
 #include <search.h>

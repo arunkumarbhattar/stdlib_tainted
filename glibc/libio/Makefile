@@ -166,13 +166,13 @@ LDFLAGS-tst-bz24228 = -Wl,--version-script=tst-bz24228.map
 tst_wprintf2-ARGS = "Some Text"
 
 test-fmemopen-ENV = MALLOC_TRACE=$(objpfx)test-fmemopen.mtrace \
-		    LD_PRELOAD=$(common-objpfx)/tmalloc/libc_malloc_debug.so
+		    LD_PRELOAD=$(common-objpfx)/malloc/libc_malloc_debug.so
 tst-fopenloc-ENV = MALLOC_TRACE=$(objpfx)tst-fopenloc.mtrace \
-		   LD_PRELOAD=$(common-objpfx)/tmalloc/libc_malloc_debug.so
+		   LD_PRELOAD=$(common-objpfx)/malloc/libc_malloc_debug.so
 tst-bz22415-ENV = MALLOC_TRACE=$(objpfx)tst-bz22415.mtrace \
-		  LD_PRELOAD=$(common-objpfx)/tmalloc/libc_malloc_debug.so
+		  LD_PRELOAD=$(common-objpfx)/malloc/libc_malloc_debug.so
 tst-bz24228-ENV = MALLOC_TRACE=$(objpfx)tst-bz24228.mtrace \
-		  LD_PRELOAD=$(common-objpfx)/tmalloc/libc_malloc_debug.so
+		  LD_PRELOAD=$(common-objpfx)/malloc/libc_malloc_debug.so
 
 generated += test-fmemopen.mtrace test-fmemopen.check
 generated += tst-fopenloc.mtrace tst-fopenloc.check
@@ -267,17 +267,17 @@ $(objpfx)tst-fopenloc-cmp.out: ../iconvdata/testdata/ISO-8859-1..UTF8 \
 	$(evaluate-test)
 
 $(objpfx)test-fmemopen-mem.out: $(objpfx)test-fmemopen.out
-	$(common-objpfx)tmalloc/mtrace $(objpfx)test-fmemopen.mtrace > $@; \
+	$(common-objpfx)malloc/mtrace $(objpfx)test-fmemopen.mtrace > $@; \
 	$(evaluate-test)
 
 $(objpfx)tst-fopenloc-mem.out: $(objpfx)tst-fopenloc.out
-	$(common-objpfx)tmalloc/mtrace $(objpfx)tst-fopenloc.mtrace > $@; \
+	$(common-objpfx)malloc/mtrace $(objpfx)tst-fopenloc.mtrace > $@; \
 	$(evaluate-test)
 
 $(objpfx)tst-bz22415-mem.out: $(objpfx)tst-bz22415.out
-	$(common-objpfx)tmalloc/mtrace $(objpfx)tst-bz22415.mtrace > $@; \
+	$(common-objpfx)malloc/mtrace $(objpfx)tst-bz22415.mtrace > $@; \
 	$(evaluate-test)
 
 $(objpfx)tst-bz24228-mem.out: $(objpfx)tst-bz24228.out
-	$(common-objpfx)tmalloc/mtrace $(objpfx)tst-bz24228.mtrace > $@; \
+	$(common-objpfx)malloc/mtrace $(objpfx)tst-bz24228.mtrace > $@; \
 	$(evaluate-test)

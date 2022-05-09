@@ -16,7 +16,7 @@
    License along with the GNU C Library; if not, see
    <https://www.gnu.org/licenses/>.  */
 
-#include <tmalloc.h>
+#include <malloc.h>
 #include <obstack.h>
 #include <stdio.h>
 #include <string.h>

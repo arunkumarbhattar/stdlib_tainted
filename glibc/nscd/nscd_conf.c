@@ -18,7 +18,7 @@
 #include <errno.h>
 #include <error.h>
 #include <libintl.h>
-#include <tmalloc.h>
+#include <malloc.h>
 #include <pwd.h>
 #include <stdio.h>
 #include <stdio_ext.h>
